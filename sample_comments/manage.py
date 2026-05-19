@@ -3,18 +3,10 @@
 
 import os
 import sys
-from pathlib import Path
 
 
 def main():
     """Run administrative tasks."""
-    
-    # add this so that we can import from sample_comments
-    # taken from: https://github.com/jazzband/django-taggit/blob/master/sample_taggit/manage.py
-    sys.path.append(str(Path(__file__).resolve().parent.parent))
-    
-    
-    
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "sample_comments.settings")
     try:
         from django.core.management import execute_from_command_line
